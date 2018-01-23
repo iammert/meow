@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">meowlib</string>
+    <item name="container" type="id" />
+</resources>
