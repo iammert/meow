@@ -15,6 +15,7 @@ class ActivityWatcher constructor(application: Application) {
         }
 
         override fun onActivityResumed(p0: Activity?) {
+            DrawerAttacher(p0).attach()
         }
 
         override fun onActivityStarted(p0: Activity?) {
@@ -30,7 +31,7 @@ class ActivityWatcher constructor(application: Application) {
         }
 
         override fun onActivityCreated(p0: Activity?, p1: Bundle?) {
-            DrawerAttacher(p0).attach()
+
         }
     }
 

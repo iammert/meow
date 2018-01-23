@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/meowlib" />
+            <option value="$PROJECT_DIR$/meowlib-no-op" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
