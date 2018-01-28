@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">meowlib</string>
     <item name="container" type="id" />
+
+    <string name="app_name">meowlib</string>
+
+    <string name="header_remote_sources">TestBoxes</string>
 </resources>

@@ -7,11 +7,12 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import iammert.com.meowlib.R
+import iammert.com.meowlib.model.MeowConfig
 
 /**
  * Created by mertsimsek on 23/01/2018.
  */
-class DrawerAttacher constructor(private val activity: Activity?) {
+class DrawerAttacher constructor(private val activity: Activity?, private val config: MeowConfig) {
 
     fun attach() {
         val content: FrameLayout = activity!!.window.decorView.findViewById<View>(android.R.id.content) as FrameLayout
@@ -36,6 +37,6 @@ class DrawerAttacher constructor(private val activity: Activity?) {
 
         activity.addContentView(drawerLayout, layoutParamDrawerLayout)
 
-        activity.fragmentManager.beginTransaction().add(R.id.container, MeowFragment()).commit()
+        activity.fragmentManager.beginTransaction().add(R.id.container, MeowFragment.newInstance(config)).commit()
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="meow_text_size_small">14sp</dimen>
+    <dimen name="meow_text_size_normal">18sp</dimen>
+    <dimen name="meow_text_size_big">22sp</dimen>
+
+    <dimen name="meow_margin_layout_8dp">16dp</dimen>
+    <dimen name="meow_margin_layout_16dp">16dp</dimen>
+    <dimen name="meow_margin_layout_32dp">32dp</dimen>
+
+</resources>

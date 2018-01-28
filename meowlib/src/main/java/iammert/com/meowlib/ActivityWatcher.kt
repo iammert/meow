@@ -3,19 +3,20 @@ package iammert.com.meowlib
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import iammert.com.meowlib.model.MeowConfig
 import iammert.com.meowlib.ui.DrawerAttacher
 
 /**
  * Created by mertsimsek on 23/01/2018.
  */
-class ActivityWatcher constructor(application: Application) {
+class ActivityWatcher constructor(application: Application, config: MeowConfig) {
 
     private val lifecycleCallback = object : Application.ActivityLifecycleCallbacks {
         override fun onActivityPaused(p0: Activity?) {
         }
 
         override fun onActivityResumed(p0: Activity?) {
-            DrawerAttacher(p0).attach()
+            DrawerAttacher(p0, config).attach()
         }
 
         override fun onActivityStarted(p0: Activity?) {
@@ -40,8 +41,8 @@ class ActivityWatcher constructor(application: Application) {
     }
 
     companion object {
-        fun watch(application: Application) {
-            ActivityWatcher(application)
+        fun watch(application: Application, config: MeowConfig) {
+            ActivityWatcher(application, config)
         }
     }
 

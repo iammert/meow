@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item_remote_source"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:layout_margin="16dp">
 
-        <variable
-            name="remoteSource"
-            type="iammert.com.meowlib.model.RemoteSource" />
-    </data>
+    <TextView
+        android:id="@+id/textview_remote_source_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
-    <RelativeLayout
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_margin="16dp"
-        android:background="@{remoteSource.isSelected ? @drawable/circle_selected : @drawable/circle_unselected}">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textColor="@{remoteSource.isSelected ? @color/meow_color_white : @color/meow_color_black}" />
-
-    </RelativeLayout>
-
-</layout>
+</RelativeLayout>
