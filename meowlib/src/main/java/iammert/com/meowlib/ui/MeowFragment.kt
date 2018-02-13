@@ -7,15 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import iammert.com.meowlib.R
+import iammert.com.meowlib.data.RemoteDataRepository
 import iammert.com.meowlib.model.MeowConfig
+import iammert.com.meowlib.model.RemoteSource
 
 /**
  * Created by mertsimsek on 23/01/2018.
  */
-class MeowFragment : Fragment() {
-
+class MeowFragment : Fragment(), RemoteSourceAdapter.ItemClickListener {
 
     lateinit var config: MeowConfig
+    lateinit var dataRepository: RemoteDataRepository
     lateinit var adapter: RemoteSourceAdapter
     lateinit var recyclerView: RecyclerView
 
@@ -28,8 +30,14 @@ class MeowFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        adapter = RemoteSourceAdapter(config.remoteList, null)
+        dataRepository = RemoteDataRepository(this.activity, config)
+        adapter = RemoteSourceAdapter(dataRepository.getRemoteDataList(), this)
         recyclerView.adapter = adapter
+    }
+
+    override fun onItemClicked(remoteSource: RemoteSource) {
+        dataRepository.saveSelectedRemoteSource(remoteSource)
+        adapter.updateList(dataRepository.getRemoteDataList())
     }
 
     companion object {

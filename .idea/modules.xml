@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/meow.iml" filepath="$PROJECT_DIR$/meow.iml" />
       <module fileurl="file://$PROJECT_DIR$/meowlib/meowlib.iml" filepath="$PROJECT_DIR$/meowlib/meowlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/meowlib-no-op/meowlib-no-op.iml" filepath="$PROJECT_DIR$/meowlib-no-op/meowlib-no-op.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meowlib-no-op/meowlib-no-op.iml" filepath="$PROJECT_DIR$/meowlib-no-op/meowlib-no-op.iml" />
     </modules>
   </component>
 </project>

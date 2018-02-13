@@ -4,7 +4,6 @@
 
     <stroke
         android:width="4dp"
-        android:color="#444444" />
-
+        android:color="#999999" />
 
 </shape>

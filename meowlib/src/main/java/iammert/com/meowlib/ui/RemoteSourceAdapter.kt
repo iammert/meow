@@ -11,11 +11,16 @@ import iammert.com.meowlib.model.RemoteSource
 /**
  * Created by mertsimsek on 24/01/18.
  */
-class RemoteSourceAdapter(private val remoteSourceList: List<RemoteSource> = ArrayList(),
+class RemoteSourceAdapter(private var remoteSourceList: List<RemoteSource> = ArrayList(),
                           private val itemClickListener: ItemClickListener?) : RecyclerView.Adapter<RemoteSourceAdapter.RemoteSourceViewHolder>() {
 
     interface ItemClickListener {
         fun onItemClicked(remoteSource: RemoteSource)
+    }
+
+    fun updateList(list: List<RemoteSource>) {
+        remoteSourceList = list
+        notifyDataSetChanged()
     }
 
     override fun getItemCount() = remoteSourceList.size
