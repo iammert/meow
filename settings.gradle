@@ -1,1 +1,1 @@
-include ':app', ':meowlib', ':meowlib-no-op'
+include ':app', ':meowlib', ':meowlib-no-op', ':common'

@@ -6,7 +6,7 @@ import android.os.Parcelable
 /**
  * Created by mertsimsek on 24/01/18.
  */
-data class RemoteSource(val id: Int, val name: String, val baseUrl: String, val isSelected: Boolean = false) : Parcelable {
+data class RemoteSource(val id: Int = -1, val name: String = "", val baseUrl: String = "", val isSelected: Boolean = false) : Parcelable {
 
     constructor(parcel: Parcel) : this(
             parcel.readInt(),

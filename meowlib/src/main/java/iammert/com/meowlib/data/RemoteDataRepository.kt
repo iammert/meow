@@ -12,12 +12,12 @@ class RemoteDataRepository constructor(private val context: Context, private val
     fun getRemoteDataList(): List<RemoteSource> {
         val list = config.remoteList
         val updatedList: ArrayList<RemoteSource> = ArrayList()
-        val selectedId = PreferencesHelper.getSelectedRemoteSource(context.applicationContext)
-        list.mapTo(updatedList) { RemoteSource(it.id, it.name, it.baseUrl, selectedId == it.id) }
+        val selectedSource = PreferencesHelper.getSelectedRemoteSource(context.applicationContext)
+        list.mapTo(updatedList) { RemoteSource(it.id, it.name, it.baseUrl, selectedSource?.id == it.id) }
         return updatedList
     }
 
     fun saveSelectedRemoteSource(remoteSource: RemoteSource) {
-        PreferencesHelper.saveSelectedRemoteSource(context, remoteSource.id)
+        PreferencesHelper.saveSelectedRemoteSource(context, remoteSource)
     }
 }
